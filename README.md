@@ -1,8 +1,8 @@
-# 786 Pizza & Wings
+# Pizza Ordering Platform
 
-Website and online ordering for 786 Pizza & Wings (400 Queen St W, Brampton). It replaces the old
-786pizza.com brochure site and its third-party ordering page, which shows "Online ordering is
-unavailable".
+A full-stack online ordering platform for pizza restaurants, built as a personal project. It runs as
+"Demo Pizzeria", a fictional restaurant: the menu, prices, address, phone number and images are all
+sample data.
 
 - **Customers:** browse the menu, build pizzas, wings and combo deals with live prices, and order for
   pickup or delivery (ASAP or scheduled). They pay cash or card in person and follow their order on
@@ -110,7 +110,7 @@ the Prisma schema has no drift, and seeds twice.
 3. **Gate deploys on CI:** in Vercel, Settings → Deployment Checks, add the **App checks** and
    **Database schema** jobs as *Blocking*, and turn on auto-assigning production domains after
    checks pass.
-4. Point the domain (786pizza.com) at Vercel once the owner controls its DNS.
+4. Point your domain at Vercel.
 5. In `/admin/settings`, set the email that receives new orders. Turn sound on once on the kitchen
    tablet (browsers need one tap before they'll play audio).
 6. Optional: an UptimeRobot monitor on `https://<domain>/api/health` (GET and HEAD both work).
@@ -143,7 +143,7 @@ These points need the owner's answer (and can all be changed in `/admin` without
 db/schema.sql, db/migrations/   source-of-truth SQL (idempotent)
 data/menu-seed.ts               the menu as data, with source notes
 prisma/schema.prisma            introspected, don't hand-edit models
-scripts/                        dev-db, db-apply, seed, create-admin, optimize-images, check-schema-drift
+scripts/                        dev-db, db-apply, seed, create-admin, generate-demo-images, check-schema-drift
 src/lib/                        pure, shared code: pricing, hours, schemas, order status, routes
 src/server/                     server-only: db, auth, http wrappers, rate limits, orders, email
 src/app/(site)/                 public pages; src/app/admin/ staff pages; src/app/api/ routes
