@@ -1,4 +1,4 @@
-// Initial menu, transcribed from the live site (786pizza.com, index.php) on 2026-09-26.
+// Sample menu for the demo restaurant.
 // Prices are in cents exactly as published there. Re-run safely with `npm run db:seed`:
 // it only inserts what's missing, so prices the owner edits in /admin are never overwritten.
 //
@@ -140,7 +140,7 @@ export const items: SeedItem[] = [
     slug: "deal-01",
     category: "deals",
     kind: "deal",
-    name: "#01 786 No-Tax Special: 3 Large Pizzas",
+    name: "#01 No-Tax Special: 3 Large Pizzas",
     description: "3 large 14″ pizzas with 3 toppings each.",
     image: "/images/deals/deal-01.webp",
     deal: { pizzas: { count: 3, toppingsPerPizza: 3 }, includes: [] },
@@ -328,7 +328,7 @@ export const items: SeedItem[] = [
     slug: "deal-10",
     category: "deals",
     kind: "deal",
-    name: "#10 786 Special: 2 Pizzas",
+    name: "#10 House Special: 2 Pizzas",
     description: "2 pizzas with up to 8 toppings combined, 4 pops and a dipping sauce.",
     image: "/images/deals/deal-10.webp",
     deal: {
@@ -563,17 +563,17 @@ export const items: SeedItem[] = [
 ];
 
 export const storeSettings = {
-  name: "786 Pizza & Wings",
-  phone: "9054530786",
-  addressLine: "400 Queen Street West",
-  city: "Brampton",
+  name: "Demo Pizzeria",
+  phone: "4165550100",
+  addressLine: "100 Example Street",
+  city: "Toronto",
   province: "ON",
-  postalCode: "L6X 1B3",
-  landmark: "Northwest corner of Queen & McLaughlin, in the FreshCo plaza",
+  postalCode: "M5V 0A0",
+  landmark: "Fictional location for this demo",
   timezone: "America/Toronto",
-  deliveryFeeCents: 499, // from the old online-ordering page ("DELIVERY - $4.99")
-  deliveryMinCents: null, // "Minimum order required" but the amount isn't published
-  deliveryFsas: ["L6X", "L6Y", "L6V", "L6W"], // placeholder: nearby areas, owner to confirm
+  deliveryFeeCents: 499,
+  deliveryMinCents: null,
+  deliveryFsas: ["M5V", "M5H", "M5J", "M5T"], // sample delivery area
 };
 
 // 11:30 AM – 11:30 PM, every day.
@@ -588,7 +588,7 @@ export const promos = [
     slug: "weekday-special",
     eyebrow: "Monday, Tuesday & Wednesday only",
     title: "2 Large Pizzas, 3 toppings each",
-    body: "Our Meat Products are HMA Certified.",
+    body: "3 toppings on each pizza.",
     priceText: "$26.50 including tax",
     image: "/images/promos/weekday.webp",
     ctaLabel: "Order the special",
@@ -597,7 +597,7 @@ export const promos = [
   {
     slug: "no-tax-special",
     eyebrow: "Pickup · Cash only · No tax",
-    title: "786 Special: 3 Large Pizzas",
+    title: "House Special: 3 Large Pizzas",
     body: "3 toppings on each. Add 20 wings or 6 pops.",
     priceText: "$38.88",
     image: "/images/promos/pizzas.webp",

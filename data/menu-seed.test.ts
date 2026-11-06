@@ -46,7 +46,7 @@ describe("menu seed", () => {
     expect(missing).toEqual([]);
   });
 
-  it("keeps the published prices (spot check against 786pizza.com)", () => {
+  it("keeps the sample menu prices stable", () => {
     const price = (slug: string, code: string) =>
       seed.items.find((i) => i.slug === slug)!.variants.find((v) => v.code === code)!.priceCents;
     expect(price("create-your-own", "small")).toBe(1079);
