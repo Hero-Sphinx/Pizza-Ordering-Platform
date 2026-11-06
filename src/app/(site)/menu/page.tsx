@@ -5,7 +5,7 @@ import { loadStore } from "@/server/menu";
 
 export const metadata: Metadata = {
   title: "Menu",
-  description: "Specialty pizzas, fresh wings, combo deals, burgers and sides. Halal, HMA-certified meat. Order online for pickup or delivery in Brampton.",
+  description: "Specialty pizzas, wings, combo deals, burgers and sides. Order online for pickup or delivery.",
 };
 
 export default async function MenuPage() {

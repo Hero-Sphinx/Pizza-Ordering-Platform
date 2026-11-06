@@ -152,8 +152,7 @@ export function MenuBrowser() {
                   <p className="mt-1 text-ink-soft">
                     {menu.toppings.filter((t) => t.group === "meat").map((t) => (t.units > 1 ? `${t.name} (counts as ${t.units})` : t.name)).join(", ")}
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-brand-800">All our meat is HMA certified.</p>
-                </div>
+                                  </div>
               </div>
             )}
             {c.slug === "wings" && (

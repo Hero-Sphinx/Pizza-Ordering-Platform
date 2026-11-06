@@ -8,7 +8,7 @@ import { ClockIcon, PhoneIcon, PinIcon } from "../icons";
 
 export function Footer({ store, showMap = true }: { store: StoreInfo; showMap?: boolean }) {
   const fullAddress = `${store.addressLine}, ${store.city}, ${store.province} ${store.postalCode}`;
-  const mapQuery = `786 Pizza & Wings, ${fullAddress}`;
+  const mapQuery = `Demo Pizzeria, ${fullAddress}`;
   // Group identical days: "Monday – Sunday 11:30 AM – 11:30 PM".
   const rows = store.hours.hours;
   const sameEveryDay = rows.length === 7 && rows.every((r) => formatHoursRange(r) === formatHoursRange(rows[0]));
@@ -19,9 +19,9 @@ export function Footer({ store, showMap = true }: { store: StoreInfo; showMap?: 
     <footer id="visit" className="mt-auto bg-brand-900 text-white">
       <div className="container-page grid gap-10 py-12 md:grid-cols-3">
         <div>
-          <Image src="/images/logo.webp" alt="786 Pizza & Wings" width={400} height={500} className="h-24 w-auto rounded-2xl bg-white p-2" />
+          <Image src="/images/logo.webp" alt="Demo Pizzeria" width={400} height={500} className="h-24 w-auto rounded-2xl bg-white p-2" />
           <p className="mt-4 max-w-xs text-white/80">
-            Hand-tossed, stone-baked pizza and fresh wings. Halal/Zabiha, HMA-certified meat. Serving Brampton since 1998.
+            A fictional restaurant that demonstrates the Pizza Ordering Platform. No real orders are taken here.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export function Footer({ store, showMap = true }: { store: StoreInfo; showMap?: 
 
       {showMap && (
         <iframe
-          title={`Map showing 786 Pizza & Wings at ${fullAddress}`}
+          title={`Map showing Demo Pizzeria at ${fullAddress}`}
           src={mapsEmbedSrc(mapQuery)}
           className="h-72 w-full border-0 grayscale-[20%]"
           loading="lazy"
@@ -84,7 +84,7 @@ export function Footer({ store, showMap = true }: { store: StoreInfo; showMap?: 
 
       <div className="border-t border-white/10">
         <p className="container-page py-5 text-sm text-white/60">
-          © {new Date().getFullYear()} 786 Pizza &amp; Wings. Prices and availability may change.
+          © {new Date().getFullYear()} Demo Pizzeria. A portfolio project with sample data.
         </p>
       </div>
     </footer>

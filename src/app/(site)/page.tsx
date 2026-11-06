@@ -6,11 +6,10 @@ import { OpenStatus } from "@/components/site/OpenStatus";
 import { formatPhone, telHref } from "@/lib/format";
 import { describeDays } from "@/lib/menu-types";
 import { formatCents } from "@/lib/money";
-import { DELIVERY_PARTNERS } from "@/lib/partners";
 import { loadMenu, loadStore } from "@/server/menu";
 
 const PROMISES = [
-  { icon: ShieldIcon, title: "HMA-certified halal", body: "All our meat is Halal/Zabiha and HMA certified." },
+  { icon: ShieldIcon, title: "Secure ordering", body: "The server re-prices every order, so totals can't be tampered with." },
   { icon: LeafIcon, title: "Never frozen", body: "Only the freshest ingredients. No microwave in our kitchen." },
   { icon: FlameIcon, title: "Hand-tossed & stone-baked", body: "Finished with extra virgin olive oil on the crust." },
 ];
@@ -134,23 +133,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="container-page pb-14" aria-labelledby="partners-title">
-        <div className="card flex flex-col items-start justify-between gap-4 p-6 sm:flex-row sm:items-center">
-          <div>
-            <h2 id="partners-title" className="h-display text-2xl">
-              Prefer your delivery app?
-            </h2>
-            <p className="text-ink-soft">You&apos;ll find us there too. Ordering here directly supports our kitchen.</p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {DELIVERY_PARTNERS.map((p) => (
-              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-                {p.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

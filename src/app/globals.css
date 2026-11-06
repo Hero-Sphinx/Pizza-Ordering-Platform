@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Brand tokens, taken from the 786 logo: emerald green, warm gold, tomato red, on cream. */
+/* Brand tokens: emerald green, warm gold, tomato red, on cream. */
 @theme {
   --color-brand-50: #eefaf2;
   --color-brand-100: #d5f2de;

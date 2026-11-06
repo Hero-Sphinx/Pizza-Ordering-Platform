@@ -22,12 +22,12 @@ export function Header({ store }: { store: StoreInfo }) {
           <p className="flex items-center gap-1.5 font-medium">
             <ShieldIcon width={16} height={16} className="text-gold-400" />
             <span>
-              <span className="xl:hidden">HMA-certified halal</span>
-              <span className="hidden xl:inline">Our meat products are HMA certified · Halal/Zabiha</span>
+              <span className="xl:hidden">Demo store</span>
+              <span className="hidden xl:inline">Demo store · portfolio project · no real orders</span>
             </span>
           </p>
           <div className="hidden items-center gap-5 whitespace-nowrap lg:flex">
-            <a href={mapsHref(`786 Pizza & Wings, ${fullAddress}`)} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-gold-300">
+            <a href={mapsHref(`Demo Pizzeria, ${fullAddress}`)} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-gold-300">
               <PinIcon width={16} height={16} />
               {store.addressLine}, {store.city}
             </a>
@@ -42,11 +42,11 @@ export function Header({ store }: { store: StoreInfo }) {
 
       <div className="border-b border-ink/10 bg-white/95 backdrop-blur">
         <div className="container-page flex h-16 items-center gap-3 md:h-20">
-          <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="786 Pizza & Wings home">
+          <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Demo Pizzeria home">
             <Image src="/images/logo.webp" alt="" width={400} height={500} loading="eager" className="h-13 w-auto md:h-16" />
             <span className="h-display text-lg leading-none text-ink sm:text-xl">
-              786 Pizza <span className="text-tomato-600">&amp;</span> Wings
-              <span className="mt-0.5 block text-[0.65rem] font-semibold tracking-wide text-brand-700 sm:text-xs">STONE-BAKED · SINCE 1998</span>
+              Demo <span className="text-tomato-600">Pizzeria</span>
+              <span className="mt-0.5 block text-[0.65rem] font-semibold tracking-wide text-brand-700 sm:text-xs">ORDERING PLATFORM DEMO</span>
             </span>
           </Link>
 

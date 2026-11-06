@@ -11,7 +11,7 @@ import { formatCents } from "@/lib/money";
 import { ACTION_LABEL, STATUS_LABEL, allowedTransitions, type OrderStatus } from "@/lib/order-status";
 
 const POLL_MS = 8000;
-const SOUND_KEY = "786-admin-sound";
+const SOUND_KEY = "pizza-admin-sound";
 
 function chime() {
   try {
@@ -148,7 +148,7 @@ function Ticket({ order, timezone }: { order: AdminOrder; timezone: string }) {
   const due = order.scheduledFor ? new Date(order.scheduledFor) : null;
   return (
     <div className="hidden font-mono text-sm print:block">
-      <p className="text-center text-lg font-bold">786 PIZZA &amp; WINGS</p>
+      <p className="text-center text-lg font-bold">DEMO PIZZERIA</p>
       <p className="text-center text-2xl font-bold">
         #{order.orderNumber} {order.fulfilment.toUpperCase()}
       </p>
@@ -232,7 +232,7 @@ export function OrderBoard({ initial, timezone, orderingEnabled }: { initial: Ad
   useEffect(() => {
     const t = setInterval(refresh, POLL_MS);
     const onFocus = () => {
-      document.title = "Orders | 786 Staff";
+      document.title = "Orders | Staff";
       void refresh();
     };
     window.addEventListener("focus", onFocus);

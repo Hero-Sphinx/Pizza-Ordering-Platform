@@ -30,7 +30,7 @@ type CartContextValue = {
 };
 
 const CartContext = createContext<CartContextValue | null>(null);
-const STORAGE_KEY = "786-cart-v1";
+const STORAGE_KEY = "pizza-cart-v1";
 const MAX_LINES = 30;
 
 function readStored(): CartLine[] {

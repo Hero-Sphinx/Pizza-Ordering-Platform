@@ -3,7 +3,7 @@ import { TrackOrder } from "@/components/order/TrackOrder";
 
 export const metadata: Metadata = {
   title: "Track your order",
-  description: "Check the status of your 786 Pizza & Wings order with your order number and phone number.",
+  description: "Check the status of your order with your order number and phone number.",
   robots: { index: false },
 };
 

@@ -18,7 +18,7 @@ export function ToppingPicker({
 }) {
   const groups = [
     { key: "veg", label: "Vegetarian" },
-    { key: "meat", label: "Halal meat (HMA certified)" },
+    { key: "meat", label: "Meat" },
   ] as const;
   const toggle = (slug: string) => onChange(selected.includes(slug) ? selected.filter((s) => s !== slug) : [...selected, slug]);
 

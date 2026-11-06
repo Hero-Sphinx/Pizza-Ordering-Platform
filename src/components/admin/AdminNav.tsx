@@ -21,7 +21,7 @@ export function AdminNav({ name, role }: { name: string; role: "owner" | "staff"
   return (
     <header className="sticky top-0 z-30 bg-brand-900 text-white print:hidden">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-3 py-2 sm:px-5">
-        <span className="h-display mr-3 text-xl">786 Staff</span>
+        <span className="h-display mr-3 text-xl">Staff</span>
         <nav className="flex flex-wrap gap-1" aria-label="Staff">
           {LINKS.map((l) => {
             const active = l.href === "/admin" ? pathname === "/admin" : pathname.startsWith(l.href);

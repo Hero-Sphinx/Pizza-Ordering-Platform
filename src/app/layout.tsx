@@ -8,14 +8,14 @@ const baloo = Baloo_2({ variable: "--font-baloo", subsets: ["latin"], weight: ["
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.APP_URL ?? "http://localhost:3000"),
   title: {
-    default: "786 Pizza & Wings | Halal pizza & wings in Brampton",
-    template: "%s | 786 Pizza & Wings",
+    default: "Demo Pizzeria | Pizza Ordering Platform demo",
+    template: "%s | Demo Pizzeria",
   },
   description:
-    "Hand-tossed, stone-baked halal pizza and fresh wings at Queen & McLaughlin in Brampton. HMA-certified meat. Order online for pickup or delivery.",
+    "A demo restaurant for the Pizza Ordering Platform: menu, live prices, pickup or delivery, and a live kitchen board.",
   openGraph: {
     type: "website",
-    siteName: "786 Pizza & Wings",
+    siteName: "Demo Pizzeria",
     images: [{ url: "/images/promos/pizzas.webp", width: 900, height: 596 }],
   },
 };
