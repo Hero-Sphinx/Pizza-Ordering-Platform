@@ -1,4 +1,4 @@
-/** "9054530786" -> "(905) 453-0786" */
+/** "4165550100" -> "(416) 555-0100" */
 export function formatPhone(digits: string): string {
   const d = digits.replace(/\D/g, "").slice(-10);
   return d.length === 10 ? `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}` : digits;

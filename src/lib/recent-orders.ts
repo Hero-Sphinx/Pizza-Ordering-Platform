@@ -3,7 +3,7 @@
 
 export type RecentOrder = { token: string; orderNumber: number; placedAt: string };
 
-const KEY = "786-recent-orders-v1";
+const KEY = "pizza-recent-orders-v1";
 const MAX = 5;
 const KEEP_DAYS = 14;
 

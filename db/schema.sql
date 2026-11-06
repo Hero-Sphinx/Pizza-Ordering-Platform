@@ -1,4 +1,4 @@
--- 786 Pizza & Wings: source-of-truth schema.
+-- Pizza Ordering Platform: source-of-truth schema.
 -- Every statement is idempotent so this file (and each migration) can be re-applied safely.
 -- The Prisma schema is introspected from this (`npm run db:pull`), never hand-written.
 -- Money is always integer cents. Times are timestamptz; store-local logic uses store_settings.timezone.

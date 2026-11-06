@@ -8,7 +8,7 @@ const optional = z
 
 const schema = z.object({
   DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),
-  // Public base URL, used in emails. e.g. https://www.786pizza.com
+  // Public base URL, used in emails. e.g. https://www.example.com
   APP_URL: z.string().url().default("http://localhost:3000"),
   // Secret for hashing client IPs (HMAC). Any long random string.
   IP_HASH_SECRET: z.string().min(16).default("dev-only-ip-hash-secret-change-me"),
